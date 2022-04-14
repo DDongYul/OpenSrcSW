@@ -10,7 +10,7 @@ import java.util.*;
 @SuppressWarnings("unchecked")
 public class searcher {
 <<<<<<< HEAD
-    double[] calcSim2(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
+    double[] calcSim(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
 
         ArrayList tf = new ArrayList();           //tf 값을 담는 리스트 (query에 따라 tf의 개수가 달라지므로 리스트로 선언)
         double[] calcsim = {0.0,0.0,0.0,0.0,0.0};               // 5개의 id의 calcsim을 담을 배열
@@ -54,7 +54,7 @@ public class searcher {
         return calcsim;
     }
 =======
-double[] calcSim(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
+double[] InnerProduct(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
 
     ArrayList tf = new ArrayList();           //tf 값을 담는 리스트 (query에 따라 tf의 개수가 달라지므로 리스트로 선언)
     double[] calcsim = {0.0,0.0,0.0,0.0,0.0};               // 5개의 id의 calcsim을 담을 배열
@@ -133,8 +133,8 @@ void searchDoc(String query) throws IOException, ClassNotFoundException {
 
     double[] calcSim = new double[5];       //calcsim값 담을 배열
     double[] calcSim_clone = new double[5]; //id 순서찾기위해 정렬할 배열
-    calcSim = calcSim2(data);
-    calcSim_clone = calcSim2(data);
+    calcSim = calcSim(data);
+    calcSim_clone = calcSim(data);
     Arrays.sort(calcSim_clone);             //클론만 정렬
 
     Integer[] id = new Integer[3];          //상위 3개의 id 담을 배열
