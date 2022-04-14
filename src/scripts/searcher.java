@@ -10,7 +10,7 @@ import java.util.*;
 @SuppressWarnings("unchecked")
 public class searcher {
 <<<<<<< HEAD
-    double[] calcSim(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
+    double[] InnerProduct(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
 
         ArrayList tf = new ArrayList();           //tf 값을 담는 리스트 (query에 따라 tf의 개수가 달라지므로 리스트로 선언)
         double[] calcsim = {0.0,0.0,0.0,0.0,0.0};               // 5개의 id의 calcsim을 담을 배열
@@ -54,7 +54,7 @@ public class searcher {
         return calcsim;
     }
 =======
-double[] InnerProduct(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
+double[] calcSim(HashMap<String , Integer> data) throws IOException, ClassNotFoundException {
 
     ArrayList tf = new ArrayList();           //tf 값을 담는 리스트 (query에 따라 tf의 개수가 달라지므로 리스트로 선언)
     double[] calcsim = {0.0,0.0,0.0,0.0,0.0};               // 5개의 id의 calcsim을 담을 배열
